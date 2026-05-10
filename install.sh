@@ -25,6 +25,11 @@ fi
 # Core packages
 echo "Installing core packages"
 core_packages=(
+    p7zip
+    unzip
+    zip
+    zathura
+    zathura-pdf-mupdf
     zsh
     fzf
     exa

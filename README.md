@@ -23,7 +23,9 @@ Minimalist, sleek, and high-performance **Arch Linux** configuration. Optimized 
 - **🌓 Dynamic Theme Toggle (`SUPER + S`):** Instant switch between Black and White modes (Wallpapers + UI).
 - **📊 Interactive Dashboards:** Custom Rofi-based menus for Power, WiFi, Bluetooth, and Audio.
 - **🔋 Battery Management:** Intelligent capping and auto-shutdown features for laptop longevity.
-- **🖥️ TUI Greeter:** A clean, terminal-based login screen that replaces bloated graphical managers.
+- **🖥️ Login & Lock:** `greetd` + `tuigreet` (TUI) and `hyprlock` (Monochrome).
+- **📚 PDF Reader:** `Zathura` with high-quality math rendering and dark mode.
+- **📦 Archive Tooling:** Full support for `.zip`, `.7z`, and `.rar` files.
 - **📸 Screenshot System:** Built-in area selection with `grim` and `slurp`.
 
 ---
