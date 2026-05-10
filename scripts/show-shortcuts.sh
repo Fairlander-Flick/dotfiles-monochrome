@@ -6,6 +6,7 @@ SUPER + Return : Kitty Terminal
 SUPER + W      : Firefox Browser
 SUPER + E      : PCManFM Manager
 SUPER + V      : VS Code
+SUPER + Y      : YouTube Music
 SUPER + D      : App Launcher (Rofi)
 
 ⚙️ SYSTEM CONTROLS
