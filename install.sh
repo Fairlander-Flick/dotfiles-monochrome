@@ -106,6 +106,7 @@ yay_packages=(
     tty-clock
     waybar-module-pacman-updates-git
     tela-circle-icon-theme-black
+    graphite-gtk-theme
     kernel-modules-hook
     activate-linux
 )
