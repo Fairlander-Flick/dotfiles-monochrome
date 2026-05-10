@@ -1,10 +1,10 @@
-/* === Dark Theme === */
-@define-color foreground #ffffff;
-@define-color background #222222;
-@define-color accent #686868;
-@define-color glass rgba(34, 34, 34, 0.85);
-@define-color ws-active #686868;
-@define-color shadow #111111;
+/* === Light Theme === */
+@define-color foreground #222222;
+@define-color background #ffffff;
+@define-color accent #aaaaaa;
+@define-color glass rgba(255, 255, 255, 0.85);
+@define-color ws-active #aaaaaa;
+@define-color shadow rgba(0, 0, 0, 0.1);
 
 * {
   background: transparent;
@@ -38,7 +38,7 @@ window#waybar {
   padding: 4px 14px;
   border-radius: 0;
   box-shadow: 0 0 3px 2px @shadow;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 #custom-arch {
@@ -52,7 +52,7 @@ window#waybar {
 
 #workspaces button {
   padding: 0 8px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
   background-color: transparent;
   transition: all 0.2s ease;
 }
@@ -63,7 +63,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #clock {
@@ -72,16 +72,16 @@ window#waybar {
 }
 
 #custom-power {
-  color: #ff5555;
+  color: #cc0000;
   font-size: 16px;
   padding: 4px 12px;
 }
 
 tooltip {
-  background: rgba(34, 34, 34, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 tooltip label {
-  color: #ffffff;
+  color: #222222;
 }

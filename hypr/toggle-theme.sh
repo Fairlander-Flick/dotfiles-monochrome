@@ -1,21 +1,32 @@
 #!/bin/bash
 
-# Simple Light/Dark Theme Toggler with specific wallpapers
-CURRENT_THEME=$(gsettings get org.gnome.desktop.interface color-scheme)
-WALLDIR="$HOME/Wallpapers"
+# Theme Toggle Script
+STATE_FILE="$HOME/.cache/theme_state"
+WALL_DARK="$HOME/Wallpapers/black.jpg"
+WALL_LIGHT="$HOME/Wallpapers/white.jpg"
 
-if [[ "$CURRENT_THEME" == "'prefer-dark'" || "$CURRENT_THEME" == "'default'" ]]; then
-    # Switch to Light Mode
-    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-    gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Light'
-    
-    # Set light mode wallpaper
-    swww img "$WALLDIR/light-wallpaper.png" -t wipe
-else
-    # Switch to Dark Mode
-    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-    gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark'
-    
-    # Set dark mode wallpaper
-    swww img "$WALLDIR/dark-wallpaper.png" -t wipe
+WAYBAR_CONFIG="$HOME/.config/waybar"
+
+# Create state file if it doesn't exist
+if [ ! -f "$STATE_FILE" ]; then
+    echo "dark" > "$STATE_FILE"
 fi
+
+CURRENT_THEME=$(cat "$STATE_FILE")
+
+if [ "$CURRENT_THEME" == "dark" ]; then
+    # Switch to LIGHT
+    awww img "$WALL_LIGHT" --transition-type fade --transition-duration 1 --filter Nearest
+    ln -sf "$WAYBAR_CONFIG/style-light.css" "$WAYBAR_CONFIG/style.css"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    echo "light" > "$STATE_FILE"
+else
+    # Switch to DARK
+    awww img "$WALL_DARK" --transition-type fade --transition-duration 1 --filter Nearest
+    ln -sf "$WAYBAR_CONFIG/style-dark.css" "$WAYBAR_CONFIG/style.css"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    echo "dark" > "$STATE_FILE"
+fi
+
+# Reload Waybar
+pkill -USR2 waybar

@@ -1,6 +1,5 @@
 /**
- * Hinterlands Power Menu Theme
- * 100% Matching Working Syntax
+ * Power Dashboard Theme - Optimized for readability
  */
 
 * {
@@ -9,7 +8,7 @@
     fg0:    #ffffff;
     acc:    #686868;
 
-    font:   "CaskaydiaCove Nerd Font 40";
+    font:   "CaskaydiaCove Nerd Font 14";
     background-color:   transparent;
     text-color:         @fg0;
     margin:     0px;
@@ -19,26 +18,26 @@
 
 window {
     location:       center;
-    width:          800px;
+    width:          600px; /* Genişlik ayarlandı */
     border:         2px;
     border-color:   @fg0;
     background-color:   @bg0;
 }
 
 mainbox {
-    padding:    40px;
+    padding:    20px;
     children:   [ listview ];
 }
 
 listview {
-    spacing:    20px;
-    lines:      1;
-    columns:    5;
+    spacing:    10px;
+    lines:      3;
+    columns:    1;
     fixed-height: true;
 }
 
 element {
-    padding:    30px 10px;
+    padding:    15px 20px;
     background-color:   @bg1;
 }
 
@@ -49,6 +48,6 @@ element selected {
 
 element-text {
     vertical-align: 0.5;
-    horizontal-align: 0.5;
+    horizontal-align: 0.0; /* Sola yaslandı */
     text-color: inherit;
 }
