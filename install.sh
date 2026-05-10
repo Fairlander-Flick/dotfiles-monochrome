@@ -88,6 +88,7 @@ basic_packages=(
     pcmanfm
     pavucontrol
     sddm
+    network-manager-applet
     ueberzugpp
 )
 
