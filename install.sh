@@ -13,12 +13,13 @@ sudo pacman -Syu --noconfirm
 # Check if yay is installed
 if ! command -v yay &> /dev/null; then
     echo "installing yay..."
+    SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
     sudo pacman -S --needed --noconfirm base-devel git
     cd /tmp
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si --noconfirm
-    cd -
+    cd "$SCRIPT_DIR"
 fi
 
 # Core packages
@@ -32,7 +33,8 @@ core_packages=(
     imagemagick
     neovim
     ranger
-    ueberzugpp
+    hyprland
+    hyprland-protocols
     fastfetch
     rofi
     waybar
@@ -79,6 +81,8 @@ basic_packages=(
     btop
     pcmanfm
     pavucontrol
+    sddm
+    ueberzugpp
 )
 
 for pkg in "${basic_packages[@]}"; do

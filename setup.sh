@@ -94,6 +94,10 @@ echo "zsh configured successfully."
 
 echo "setup complete"
 
+# Enable SDDM display manager
+echo "Enabling SDDM..."
+sudo systemctl enable sddm
+
 # Change shell to zsh
 echo "Changing shell to zsh..."
 chsh -s $(which zsh)
