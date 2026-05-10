@@ -1,57 +1,46 @@
-# 🌑 Monochrome Dotfiles (ThinkPad X1 Yoga Edition)
+# 🌑 Monochrome Dotfiles
 
-A highly customized, minimalist monochrome setup for Arch Linux using Hyprland and Waybar. Designed specifically for the ThinkPad X1 Yoga, focusing on productivity, power efficiency, and a clean "cix" aesthetic.
+A highly customized, minimalist monochrome setup for Arch Linux using Hyprland. Designed for productivity and a clean aesthetic.
 
 ## ✨ Key Features
 
-- **🌓 Dynamic Theme Toggle (`SUPER + S`):** Instant switch between Black and White modes (Wallpapers + Waybar + GTK).
-- **📊 Unified Dashboards:** Interactive Rofi-based control centers for Audio, WiFi, Bluetooth, and Battery.
-- **🔋 Intelligent Battery Management:** 
-  - **Saver Mode:** Hard-capped at 80% charge to preserve battery health.
-  - **Auto-Shutdown:** Automatic safe shutdown at 20% battery level.
-- **🚀 Cix Terminal Startup:** Personalized `fastfetch` dashboard with system stats and minimalist icons.
-- **📸 Advanced Screenshot System:**
-  - `Druck`: Select area and copy to clipboard.
-  - `ALT + Druck`: Select area and save to `~/Screenshots`.
-- **📚 Pro PDF Reading:** Zathura configured with monochrome recoloring (`Ctrl + R`).
+- **🌓 Dynamic Theme Toggle:** Instant switch between Black and White modes.
+- **📊 Unified Dashboards:** Interactive Rofi-based control centers for Audio, WiFi, Bluetooth, and Power.
+- **🔋 Intelligent Power Management:** 
+  - **Battery Health:** Optional charge capping.
+  - **Auto-Shutdown:** Safety measures for low battery.
+- **🖥️ Monochrome Greeter:** Modern `greetd` + `tuigreet` login interface.
+- **🔒 Stylish Lockscreen:** Optimized `hyprlock` with monochrome visuals.
 
 ## 🛠️ Installation
 
 ### 1. Prerequisites
-Ensure you have the following packages installed:
-```bash
-sudo pacman -S hyprland waybar kitty rofi-wayland swww tlp grim slurp wl-clipboard zathura zathura-pdf-mupdf fastfetch bluez bluetoothctl network-manager-applet
-```
+This setup assumes you are on Arch Linux. Core requirements:
+`hyprland`, `waybar`, `kitty`, `rofi-wayland`, `swww`, `greetd-tuigreet`, `hyprlock`, `fastfetch`.
 
-### 2. Clone and Setup
+### 2. Fast Setup
+Clone the repository and run the install script:
 ```bash
-git clone https://github.com/Fairlander-Flick/dotfiles-monochrome.git ~/dotfiles-monochrome
+git clone https://github.com/YOUR_USERNAME/dotfiles-monochrome.git ~/dotfiles-monochrome
 cd ~/dotfiles-monochrome
-
-# Copy configurations to ~/.config
-cp -r hypr waybar fastfetch rofi zathura scripts ~/.config/
-# Note: Ensure scripts in ~/.config/scripts are executable
-chmod +x ~/.config/scripts/*.sh
+chmod +x install.sh setup.sh
+./install.sh
 ```
 
-### 3. User Scripts
-Make sure to symlink or copy the specialized scripts to your local scripts folder:
+### 3. Manual Configuration
+If you prefer manual setup, copy the config folders:
 ```bash
-mkdir -p ~/.scripts
-cp scripts/* ~/.scripts/
-chmod +x ~/.scripts/*.sh
+cp -r btop hypr kitty ranger rofi swaync waybar fastfetch ~/.config/
 ```
 
-## ⌨️ Keybindings
+## ⌨️ Keybindings (Default)
 
 | Key | Action |
 |-----|--------|
 | `SUPER + T` | Open Kitty Terminal |
-| `SUPER + V` | Open VS Code |
 | `SUPER + S` | Toggle Light/Dark Mode |
-| `SUPER + A` | Toggle Waybar (Slide Animation) |
-| `Druck` | Screenshot (Clipboard) |
-| `ALT + Druck` | Screenshot (Save to Folder) |
+| `SUPER + A` | Toggle Waybar |
+| `Print`     | Screenshot |
 
 ---
-*Maintained by Fairlander.*
+*Generated for minimal Arch setups.*
