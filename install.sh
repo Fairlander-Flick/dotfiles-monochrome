@@ -25,6 +25,7 @@ fi
 # Core packages
 echo "Installing core packages"
 core_packages=(
+    zsh
     fzf
     exa
     unzip
@@ -56,7 +57,6 @@ core_packages=(
     firefox
     code
     libnotify
-    swaync
     hyprlock
     ddcutil
 
