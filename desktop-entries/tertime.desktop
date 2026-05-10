@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name = TerTime
-GenericName = Terminal Time Widget
-Type = Application
-Exec = kitty --class tertime -e tty-clock -c -D

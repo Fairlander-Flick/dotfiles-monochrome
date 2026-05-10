@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name = Instagram
-Type = Application
-Exec = brave --profile-directory=Default --app=https://instagram.com --start-maximized
-Keywords = chu
