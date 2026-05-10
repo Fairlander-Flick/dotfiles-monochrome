@@ -35,6 +35,13 @@ core_packages=(
     ranger
     hyprland
     hyprland-protocols
+    xorg-xwayland
+    mesa
+    libva-intel-driver
+    intel-media-driver
+    polkit-kde-agent
+    qt5-wayland
+    qt6-wayland
     fastfetch
     rofi
     waybar
@@ -61,7 +68,7 @@ core_packages=(
     wireplumber
     rtkit
     xdg-desktop-portal-hyprland
-    libva-nvidia-driver
+    xdg-desktop-portal-gtk
 )
 
 for pkg in "${core_packages[@]}"; do
