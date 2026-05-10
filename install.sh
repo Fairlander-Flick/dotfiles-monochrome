@@ -56,7 +56,6 @@ core_packages=(
     code
     libnotify
     swaync
-    noto-fonts-cjk
     hyprlock
     ddcutil
 
@@ -102,7 +101,6 @@ done
 # Yay packages
 echo "Installing yay packages"
 yay_packages=(
-    brave-bin
     tty-clock
     waybar-module-pacman-updates-git
     tela-circle-icon-theme-black
