@@ -29,6 +29,7 @@ core_packages=(
     exa
     unzip
     zip
+    kitty
     nsxiv
     imagemagick
     neovim
