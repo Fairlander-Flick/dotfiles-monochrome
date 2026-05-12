@@ -109,4 +109,4 @@ cp -r btop fastfetch hypr kitty ranger rofi swaync waybar zathura ~/.config/
 ```
 
 ---
-*Created and maintained for those who live in the terminal.*
+*Edited files from hyprzark*
