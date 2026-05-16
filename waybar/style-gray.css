@@ -1,0 +1,87 @@
+/* === Gray Theme === */
+@define-color foreground #ffffff;
+@define-color background #555555;
+@define-color accent #888888;
+@define-color glass rgba(85, 85, 85, 0.85);
+@define-color ws-active #888888;
+@define-color shadow #333333;
+
+* {
+  background: transparent;
+  color: @foreground;
+  border: none;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font Propo';
+  font-size: 14px;
+  letter-spacing: 0.75px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#waybar > box {
+  margin: 8px 4px 4px 4px;
+}
+
+#custom-arch,
+#clock,
+#workspaces,
+#idle_inhibitor,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery,
+#custom-power {
+  background-color: @glass;
+  margin: 4px 6px;
+  padding: 4px 14px;
+  border-radius: 0;
+  box-shadow: 0 0 3px 2px @shadow;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#custom-arch {
+  font-size: 18px;
+  padding: 4px 12px;
+}
+
+#workspaces {
+  padding: 2px 4px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  background-color: @ws-active;
+  color: @foreground;
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#clock {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+#custom-power {
+  color: #ff7777;
+  font-size: 16px;
+  padding: 4px 12px;
+}
+
+tooltip {
+  background: rgba(85, 85, 85, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+tooltip label {
+  color: #ffffff;
+}
